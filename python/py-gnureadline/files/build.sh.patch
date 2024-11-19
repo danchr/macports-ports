@@ -1,6 +1,7 @@
---- rl/build.sh.orig	2022-06-14 08:42:13.000000000 +1000
-+++ rl/build.sh	2022-10-13 08:37:51.000000000 +1100
-@@ -14,34 +14,6 @@
+diff --git a/rl/build.sh b/rl/build.sh
+--- a/rl/build.sh
++++ b/rl/build.sh
+@@ -14,34 +14,6 @@ if [ `uname` == "Darwin" ]; then
  	echo "Using compiler $osx_compiler on OS X"
  	# Parse output of cc -v to guess real compiler (works with clang and gcc, at least)
  	echo "Guessing actual compiler:" `$osx_compiler -v 2>&1 | grep ' version '`
@@ -35,9 +36,9 @@
  fi
  
  rm -rf readline-lib
-@@ -51,6 +23,8 @@
- patch -p0 < ../readline81-001
- patch -p0 < ../readline81-002
+@@ -62,6 +34,8 @@ patch -p0 < ../readline82-011
+ patch -p0 < ../readline82-012
+ patch -p0 < ../readline82-013
  # Force compiler to CC/cc in the case of Darwin
 -./configure CPPFLAGS='-DNEED_EXTERN_PC -fPIC' $cc_override
 +export CFLAGS="$CFLAGS __OPTFLAGS__ -fPIC"
