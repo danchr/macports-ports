@@ -5,7 +5,7 @@ PortGroup               python 1.0
 
 name                    hg-evolve
 version                 11.1.6
-revision                0
+revision                1
 checksums               rmd160  8be9bb443a5443aeccadba0f02de02b454feb9e2 \
                         sha256  26e9f58196195eff27b890676deacad5b7133d32c20e0186779e3739e38454eb \
                         size    864773
@@ -28,7 +28,7 @@ long_description        Additional history rewriting commands for Mercurial \
                         developers to safely rewrite the same parts of history \
                         in a distributed way.
 
-python.default_version  311
+python.default_version  313
 python.pep517           yes
 
 depends_lib-append      port:mercurial
