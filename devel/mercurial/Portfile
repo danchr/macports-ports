@@ -43,7 +43,7 @@ checksums           ${distname}${extract.suffix}  \
                     sha256  87ac16be5e20e902385d64fb37c13abbb469eead0bfb1ddf0ab5d3d1b3d1f8e6 \
                     size    8660139
 
-python.default_version 311
+python.default_version 313
 python.pep517       no
 
 # https://trac.macports.org/ticket/65938
