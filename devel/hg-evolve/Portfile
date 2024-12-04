@@ -4,11 +4,11 @@ PortSystem              1.0
 PortGroup               python 1.0
 
 name                    hg-evolve
-version                 11.1.5
+version                 11.1.6
 revision                0
-checksums               rmd160  6f299f20239de791459cbfd758d7bd3779f98e91 \
-                        sha256  3669d2405b31085049b00240154cc180baa3b13771a1685cd48f5b77433848d2 \
-                        size    863227
+checksums               rmd160  8be9bb443a5443aeccadba0f02de02b454feb9e2 \
+                        sha256  26e9f58196195eff27b890676deacad5b7133d32c20e0186779e3739e38454eb \
+                        size    864773
 
 categories              devel
 license                 GPL-2
