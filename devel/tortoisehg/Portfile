@@ -29,22 +29,18 @@ long_description    A set of graphical tools for the Mercurial distributed \
 # must be same as Mercurial
 python.default_version 313
 
-# we use qt5 only if macOS is 10.12 or later
-# as defined on qt5 port
-if {${os.platform} eq "darwin" && ${os.major} < 16} {
-    set qt_version 4
-} else {
+# we use qt6 only if macOS is 14 or later as defined on qt6 port
+if {${os.platform} eq "darwin" && ${os.major} < 23} {
     set qt_version 5
+} else {
+    set qt_version 6
 }
 
 depends_lib-append  port:mercurial \
                     port:py${python.version}-iniparse \
                     port:py${python.version}-pyqt${qt_version}
 
-if {${qt_version} == 4} {
-    depends_lib-append \
-                    port:py${python.version}-qscintilla-qt4
-} else {
+if {${qt_version} == 5} {
     depends_lib-append \
                     port:py${python.version}-pyqt5-scintilla
 }
